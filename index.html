@@ -108,11 +108,23 @@
     .pain-card h3{font-size:18px;font-weight:800;margin-bottom:10px;color:var(--primary)}
     .pain-card p{font-size:15px;color:var(--text-muted);line-height:1.55}
 
-    .solution-banner{background:linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
-                     border:1.5px solid #a7f3d0;border-radius:20px;
-                     padding:36px 32px;margin-top:48px;text-align:center;box-shadow:var(--shadow-sm)}
-    .solution-banner h3{font-size:22px;font-weight:800;color:var(--green-text);margin-bottom:10px}
-    .solution-banner p{font-size:16px;color:#064e3b;max-width:700px;margin:0 auto;line-height:1.6}
+    .solution-banner{position:relative;overflow:hidden;
+                     background:linear-gradient(150deg, #09261c 0%, var(--primary) 55%, #154e3b 100%);
+                     border-radius:24px;padding:52px 44px 56px;margin-top:56px;text-align:center;
+                     box-shadow:0 24px 44px -18px rgba(9,38,28,.45)}
+    .solution-banner::before{content:"";position:absolute;inset:0;
+                     background-image:radial-gradient(circle at 1px 1px, rgba(255,255,255,.07) 1px, transparent 0);
+                     background-size:26px 26px}
+    .solution-banner > *{position:relative;z-index:2}
+    .sb-mark{width:84px;height:22px;display:block;margin:0 auto 18px}
+    .sb-label{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.12em;
+              text-transform:uppercase;color:#fef08a;background:rgba(255,255,255,.08);
+              border:1px solid rgba(255,255,255,.2);padding:6px 16px;border-radius:99px;margin-bottom:20px}
+    .solution-banner h3{font-size:clamp(24px,3.6vw,34px);font-weight:800;color:#fff;
+                        letter-spacing:-.01em;margin-bottom:14px;line-height:1.2}
+    .sb-lead{font-size:clamp(17px,2.4vw,20px);font-weight:700;color:#fde68a;
+             max-width:640px;margin:0 auto 14px;line-height:1.45}
+    .sb-corps{font-size:16px;color:#cbd5e1;max-width:660px;margin:0 auto;line-height:1.65}
 
     /* ---------- MÉTHODE ---------- */
     .process-section{padding:80px 0}
@@ -150,6 +162,14 @@
     .offres-note{max-width:680px;margin:38px auto 0;text-align:center;
                  font-size:14.5px;color:var(--text-muted);line-height:1.6}
 
+
+    .unique-bloc{margin-top:44px;padding-top:40px;border-top:1px solid var(--border)}
+    .unique-bloc h3{font-size:22px;font-weight:800;color:var(--primary);
+                    text-align:center;margin-bottom:28px}
+    .unique-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px}
+    .unique-pt{position:relative;padding-left:20px;border-left:3px solid var(--accent)}
+    .unique-pt h4{font-size:16.5px;font-weight:800;color:var(--primary);margin-bottom:7px;line-height:1.35}
+    .unique-pt p{font-size:14.5px;color:var(--text-muted);line-height:1.55}
     /* ---------- AVANT / APRÈS ---------- */
     .why-us-section{background:var(--bg);padding:80px 0;border-top:1px solid var(--border);
                     border-bottom:1px solid var(--border)}
@@ -329,10 +349,19 @@
       </div>
 
       <div class="solution-banner">
-        <h3>Docteur PME : un seul interlocuteur</h3>
-        <p>
-          Ne multipliez plus les démarches isolées. Nous prenons en charge toute la chaîne :
-          <strong>mise en conformité, compte d'exploitation prévisionnel et constitution intégrale de votre dossier bancaire.</strong>
+        <svg class="sb-mark" viewBox="0 0 100 26" aria-hidden="true">
+          <path d="M4 16h18l6-12 8 22 7-14 6 3h12" fill="none" stroke="#F5C451"
+                stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M61 16l16-12" fill="none" stroke="#F5C451" stroke-width="4" stroke-linecap="round"/>
+          <path d="M68 2h12v11" fill="none" stroke="#F5C451" stroke-width="4"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="sb-label">Le coeur de notre méthode</span>
+        <h3>Le médecin traitant de votre entreprise</h3>
+        <p class="sb-lead">Un seul interlocuteur, du diagnostic à la décision.</p>
+        <p class="sb-corps">
+          Vous racontez votre entreprise une fois. Nous coordonnons tout le reste : la mise en conformité,
+          les chiffres, le dossier et son dépôt. Personne à relancer, personne à qui rappeler ce que fait l'autre.
         </p>
       </div>
     </div>
@@ -419,6 +448,24 @@
         </div>
       </div>
 
+      <div class="unique-bloc">
+        <h3>Pourquoi un seul interlocuteur change tout</h3>
+        <div class="unique-grid">
+          <div class="unique-pt">
+            <h4>Vous racontez votre entreprise une fois</h4>
+            <p>Au lieu de l'expliquer au comptable, puis au consultant, puis au banquier, chacun n'en comprenant qu'un morceau.</p>
+          </div>
+          <div class="unique-pt">
+            <h4>Personne ne se renvoie la balle</h4>
+            <p>En cas de refus, il n'y a pas trois intervenants qui se déclarent chacun hors de cause. Nous répondons du dossier entier.</p>
+          </div>
+          <div class="unique-pt">
+            <h4>L'ordre des opérations est tenu</h4>
+            <p>Régulariser avant de chiffrer, ouvrir le compte avant d'en demander l'historique. C'est ce qui fait gagner des mois.</p>
+          </div>
+        </div>
+      </div>
+
       <p class="offres-note">
         Aucun engagement n'est pris avant le diagnostic. Nous ne proposons un accompagnement
         que lorsque nous estimons le dossier défendable devant un établissement financier.
@@ -472,7 +519,7 @@
           <div class="qr-txt">
             <strong>Une question ? Échangeons de vive voix.</strong>
             <span class="qr-desk">Scannez ce QR code avec votre téléphone pour nous écrire directement sur WhatsApp.</span>
-            <span class="qr-mob">Écrivez-nous directement sur WhatsApp, notre équipe vous répond sous 48h ouvrées.</span>
+            <span class="qr-mob">Écrivez-nous directement sur WhatsApp, notre équipe vous répond dans la journée.</span>
             <a class="qr-lien" href="https://wa.me/221711653570?text=Bonjour,%20je%20souhaite%20un%20diagnostic%20pour%20mon%20entreprise">Ouvrir WhatsApp directement</a>
           </div>
           <div class="qr-code">
@@ -507,7 +554,7 @@
             </svg>
             <strong>contact@docteurpme.online</strong>
           </a>
-          <span class="contact-response-time">Nous vous répondons sous 48h ouvrées</span>
+          <span class="contact-response-time">Réponse garantie sous 24h ouvrées</span>
         </div>
       </div>
     </div>
