@@ -228,6 +228,21 @@
   .kpi span{color:var(--muted);font-size:12.5px}
   .actions ol{margin:0;padding-left:18px;display:grid;gap:4px;font-weight:600}
   .actions{background:#FFF8E6;margin:4px -10px 0;padding:12px 10px;border-radius:6px;border-bottom:0}
+  .scorebar{display:flex;align-items:center;gap:16px;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin-top:12px}
+  .scorebar .sc{font-size:32px;font-weight:800;color:var(--g800);line-height:1}
+  .scorebar .sc small{font-size:14px;color:var(--muted);font-weight:600;margin-left:2px}
+  .scorebar .sct{margin-top:6px;font-weight:700;font-size:14px;color:var(--g800)}
+  .crit-h{margin:16px 0 4px;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .crit{list-style:none;margin:0;padding:0}
+  .crit li{display:grid;grid-template-columns:14px 1fr auto;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #E3E7E3;font-size:13px}
+  .crit li i{width:9px;height:9px;border-radius:50%;display:block}
+  .crit .d2{background:#1F9D6B}.crit .d1{background:#D97706}.crit .d0{background:#C2362F}
+  .crit .n2{color:#177A53}.crit .n1{color:#A85B05}.crit .n0{color:#A92E28}
+  .crit li.more{display:block;color:var(--muted);font-style:italic;border-bottom:0;padding-top:8px}
+  .blq{background:#FBEFEE;border-radius:6px;padding:10px 12px;font-size:13px;margin-top:6px}
+  .blq strong{color:#A92E28}
+  .fin{background:var(--g800);color:#fff;border-radius:6px;padding:12px 14px;font-size:13.5px;margin-top:10px}
+  .fin b{color:var(--gold)}
   @media (max-width:880px){ .diag-wrap{grid-template-columns:1fr;gap:40px} }
 
   /* Pour qui */
@@ -318,7 +333,7 @@
           <a class="btn btn-ghost" href="https://wa.me/221711653570?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20l%27accompagnement%20Docteur%20PME." target="_blank" rel="noopener"><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z"/></svg>
             Une question ? WhatsApp</a>
         </div>
-        <p class="micro"><b>5 minutes de questionnaire.</b> Puis un diagnostic d'une page et 30 minutes d'échange. Sans frais, sans engagement.</p>
+        <p class="micro"><b>12 questions, 5 minutes.</b> Votre pré-diagnostic par email, puis 30 minutes d'échange. Sans frais, sans engagement.</p>
       </div>
 
       <div class="letter-stage" aria-hidden="true">
@@ -389,7 +404,7 @@
           <h3>Diagnostiquer le point de départ</h3>
           <div>
             <p>À partir de votre questionnaire, nous regardons votre entreprise comme la regardera l'analyste : votre situation administrative, vos relevés bancaires, votre besoin réel et ce qui existe déjà.</p>
-            <p class="out"><b>Vous recevez</b>Le diagnostic d'une page et 30 minutes d'échange. Sans frais.</p>
+            <p class="out"><b>Vous recevez</b>Votre pré-diagnostic par email en 10 minutes, puis 30 minutes d'échange. Sans frais.</p>
           </div>
         </li>
         <li class="step">
@@ -429,45 +444,36 @@
         <div class="diag-copy">
           <div class="sec-head">
             <p class="eyebrow">Le premier pas</p>
-            <h2 id="h-diag">Votre diagnostic tient sur une page.</h2>
-            <p>Pas un rapport de quarante pages. Une page que vous pouvez lire en deux minutes, et qui vous dit exactement où vous en êtes.</p>
+            <h2 id="h-diag">Votre pré-diagnostic, dans votre boîte en 10 minutes.</h2>
+            <p>12 questions, 5 minutes. Vous recevez par email un pré-diagnostic clair, qui vous dit sans détour où en est votre dossier.</p>
           </div>
           <ul>
-            <li><i>01</i><span><b>Votre conformité</b>Chaque pièce au vert, à l'orange ou au rouge, avec le délai pour la régulariser.</span></li>
-            <li><i>02</i><span><b>Ce que votre banque voit de vous</b>Le volume qui passe réellement par le compte de l'entreprise.</span></li>
-            <li><i>03</i><span><b>Votre capacité de remboursement</b>L'échéance défendable aujourd'hui, donc le montant réaliste.</span></li>
-            <li><i>04</i><span><b>Vos garanties mobilisables</b>Celles que vous pouvez vraiment activer, pas une liste théorique.</span></li>
-            <li><i>05</i><span><b>Vos trois actions prioritaires</b>Classées par impact, avec un délai réaliste pour chacune.</span></li>
+            <li><i>01</i><span><b>Votre score sur 24</b>Et votre feu : vert, orange ou rouge.</span></li>
+            <li><i>02</i><span><b>Ce que dit votre dossier</b>Vos 12 critères, notés un par un, tels qu'une banque les regarde.</span></li>
+            <li><i>03</i><span><b>Votre blocage principal</b>Le point qui fait tomber votre dossier aujourd'hui.</span></li>
+            <li><i>04</i><span><b>Le nombre de points à corriger</b>Avant de pouvoir déposer votre demande de prêt.</span></li>
+            <li><i>05</i><span><b>Puis 30 minutes ensemble</b>Pour décider par quoi commencer, en combien de temps et à quel coût.</span></li>
           </ul>
         </div>
 
-        <div class="sheet" role="img" aria-label="Exemple de diagnostic d'une page">
-          <div class="sheet-head"><b>● DOCTEUR PME · DIAGNOSTIC</b><span>1 PAGE</span></div>
+        <div class="sheet" role="img" aria-label="Exemple de pré-diagnostic reçu par email">
+          <div class="sheet-head"><b>● DOCTEUR PME · PRÉ-DIAGNOSTIC</b><span>PAR EMAIL</span></div>
           <p class="sheet-ex">Exemple fictif, à titre d'illustration</p>
-          <div class="blk">
-            <h4>01 · Conformité</h4>
-            <div class="pills"><span class="pill p-ok">RCCM</span><span class="pill p-ok">NINEA</span><span class="pill p-mid">Statuts · 3 sem.</span><span class="pill p-ko">Attestation fiscale</span></div>
+          <div class="scorebar">
+            <div class="sc">14<small>/24</small></div>
+            <div><span class="pill p-mid">ORANGE</span><p class="sct">Finançable après réparation</p></div>
           </div>
-          <div class="blk">
-            <h4>02 · Ce que la banque voit</h4>
-            <div class="kpi"><strong>35 %</strong><span>de votre activité passe par le compte de l'entreprise</span></div>
-          </div>
-          <div class="blk">
-            <h4>03 · Capacité de remboursement</h4>
-            <div class="kpi"><strong>≈ 150 000 FCFA</strong><span>de mensualité de prêt supportable aujourd'hui</span></div>
-          </div>
-          <div class="blk">
-            <h4>04 · Garanties mobilisables</h4>
-            <div class="pills"><span class="pill p-ok">Nantissement matériel</span><span class="pill p-ok">Caution du dirigeant</span><span class="pill p-mid">Délégation de créances</span></div>
-          </div>
-          <div class="blk actions">
-            <h4>05 · Vos 3 actions prioritaires</h4>
-            <ol>
-              <li>Faire passer les encaissements par le compte pro · 6 mois</li>
-              <li>Obtenir 3 pro forma datés et cachetés · 2 semaines</li>
-              <li>Mettre les statuts à jour · 3 semaines</li>
-            </ol>
-          </div>
+          <h4 class="crit-h">Ce que dit votre dossier</h4>
+          <ul class="crit">
+            <li><i class="d2"></i>Enregistrement<b class="n2">2/2</b></li>
+            <li><i class="d1"></i>Comptabilité<b class="n1">1/2</b></li>
+            <li><i class="d0"></i>États financiers<b class="n0">0/2</b></li>
+            <li><i class="d2"></i>Compte bancaire<b class="n2">2/2</b></li>
+            <li><i class="d0"></i>Capacité de remboursement<b class="n0">0/2</b></li>
+            <li class="more">+ 7 autres critères</li>
+          </ul>
+          <div class="blq"><strong>Votre blocage principal :</strong> aucun état financier</div>
+          <div class="fin"><b>8 points</b> bloquent aujourd'hui votre demande de prêt.</div>
         </div>
       </div>
     </div>
@@ -545,7 +551,7 @@
     <div class="wrap">
       <div>
         <h2 id="h-final">Rentable n'est pas finançable. <span>Nous comblons l'écart.</span></h2>
-        <p>Répondez au questionnaire en 5 minutes. Nous vous renvoyons un diagnostic d'une page, puis nous en parlons 30 minutes ensemble.</p>
+        <p>Répondez au questionnaire en 5 minutes. Votre pré-diagnostic arrive par email, puis nous en parlons 30 minutes ensemble.</p>
       </div>
       <div class="ctas">
         <a class="btn btn-gold" href="https://tally.so/r/44Z9pk" target="_blank" rel="noopener">Faire mon diagnostic gratuit (5 min)</a>
