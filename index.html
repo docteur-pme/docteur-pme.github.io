@@ -25,16 +25,15 @@
     .hero .shell{width:100%;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(350px,.92fr);gap:clamp(25px,5vw,84px);align-items:center;padding-top:72px;padding-bottom:104px}
     .eyebrow{display:flex;align-items:center;gap:13px;color:var(--gold);font-size:12px;letter-spacing:.21em;text-transform:uppercase;font-weight:800;margin:0 0 31px}
     .eyebrow:before{content:"";width:27px;height:2px;background:var(--gold)}
-    h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(46px,4.8vw,76px);letter-spacing:-.055em;line-height:1.09;margin:0;max-width:810px}
+    h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(44px,4.1vw,68px);letter-spacing:-.055em;line-height:1.06;margin:0;max-width:810px}
     h1 em{font-weight:400;font-style:normal;color:var(--gold)}
-    .lead{font-size:clamp(22px,2vw,29px);line-height:1.38;color:#fff;max-width:610px;margin:34px 0 14px;font-weight:550;letter-spacing:-.025em}
+    .lead{font-size:clamp(22px,2vw,29px);line-height:1.38;color:#fff;max-width:610px;margin:25px 0 12px;font-weight:550;letter-spacing:-.025em}
     .outcome{font-size:clamp(16px,1.25vw,18px);line-height:1.6;color:#c8d9ce;max-width:565px;margin:0 0 37px}
     .action{display:inline-flex;align-items:center;justify-content:space-between;gap:28px;min-height:76px;padding:19px 28px 19px 32px;background:var(--gold);color:#14382b;border-radius:7px;text-decoration:none;font-size:19px;font-weight:800;box-shadow:0 17px 40px rgba(0,0,0,.2);transition:transform .2s,box-shadow .2s}
     .action:hover,.action:focus-visible{transform:translateY(-3px);box-shadow:0 22px 45px rgba(0,0,0,.25)}
     .action svg{width:25px;height:25px;flex:none}
     .micro{margin:19px 0 0;color:#b8cec0;font-size:13px;line-height:1.6}
     .visual{position:relative;min-height:550px;display:grid;place-items:center;margin:0}
-    .visual:before{content:"";position:absolute;inset:38px 0 0 38px;border:1px solid rgba(245,196,81,.62);border-radius:230px 230px 22px 22px}
     .visual img{position:relative;display:block;width:min(100%,490px);height:550px;object-fit:cover;object-position:center 40%;border-radius:230px 230px 18px 18px;box-shadow:0 28px 75px rgba(0,0,0,.26)}
     .quiet{background:var(--cream);color:var(--ink);padding:clamp(55px,7vw,100px) 0}
     .quiet .shell{display:flex;align-items:center;justify-content:space-between;gap:45px}
@@ -43,10 +42,8 @@
     footer{border-top:1px solid rgba(255,255,255,.14)}
     footer .shell{padding-top:29px;padding-bottom:31px;display:flex;align-items:center;justify-content:space-between;gap:15px;color:#b8cbbd;font-size:13px}
     footer a{text-decoration:none}footer a:hover{text-decoration:underline}
-    .notice{position:fixed;z-index:5;bottom:24px;left:50%;transform:translateX(-50%);width:min(440px,calc(100% - 36px));background:#fff;color:var(--ink);padding:20px 24px;border-radius:9px;box-shadow:0 20px 60px rgba(0,0,0,.3);font-size:15px;line-height:1.5}
-    .notice[hidden]{display:none}
-    @media(max-width:850px){header .shell{height:76px}.hero{min-height:auto}.hero .shell{display:flex;flex-direction:column;align-items:stretch;padding-top:74px;padding-bottom:72px;gap:36px}.visual{min-height:420px;max-width:550px;width:100%;margin:0 auto}.visual img{height:420px}.visual:before{inset:25px 0 0 25px}.quiet .shell{display:block}.quiet p{margin-top:24px}}
-    @media(max-width:500px){.header-note{display:none}.brand{font-size:19px}.brand img{width:40px;height:40px}.hero .shell{padding-top:65px;gap:32px}.lead{margin-top:25px}.visual{min-height:320px;max-width:360px}.visual img{height:320px;border-radius:170px 170px 14px 14px}.visual:before{inset:20px 0 0 20px;border-radius:170px 170px 14px 14px}.action{width:100%;justify-content:space-between}.quiet{padding:55px 0}footer .shell{align-items:flex-start;flex-direction:column}}
+    @media(max-width:850px){header .shell{height:76px}.hero{min-height:auto}.hero .shell{display:flex;flex-direction:column;align-items:stretch;padding-top:74px;padding-bottom:72px;gap:36px}.visual{min-height:420px;max-width:550px;width:100%;margin:0 auto}.visual img{height:420px}.quiet .shell{display:block}.quiet p{margin-top:24px}}
+    @media(max-width:500px){.header-note{display:none}.brand{font-size:19px}.brand img{width:40px;height:40px}.hero .shell{padding-top:65px;gap:32px}.lead{margin-top:25px}.visual{min-height:320px;max-width:360px}.visual img{height:320px;border-radius:170px 170px 14px 14px}.action{width:100%;justify-content:space-between}.quiet{padding:55px 0}footer .shell{align-items:flex-start;flex-direction:column}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.action{transition:none}}
   </style>
 </head>
@@ -62,8 +59,7 @@
         <h1 id="titre">Reprenez le contrôle.<br><em>Sachez ce qui rapporte.</em><br>Décidez quoi changer.</h1>
         <p class="lead">Voyez ce qui freine votre entreprise et où agir en premier.</p>
         <p class="outcome">Chiffres, ventes, organisation : Docteur PME vous aide à prendre les bonnes décisions et à structurer votre quotidien pour mieux piloter.</p>
-        <!-- Remplacer la valeur vide de data-form-url par l'URL publique Fillout une fois le questionnaire publié. -->
-        <a class="action" id="diagnostic" href="#diagnostic" data-form-url="" aria-describedby="reassurance">Faire le pré-diagnostic <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="action" id="diagnostic" href="https://forms.fillout.com/t/oMyeLau9PLus" aria-describedby="reassurance">Faire le pré-diagnostic <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <p class="micro" id="reassurance">Quelques minutes pour repérer ce qui freine votre PME · Aucune pièce à joindre</p>
       </div>
       <figure class="visual"><img src="hero-docteur-pme.png" alt="Dirigeante de PME examinant ses documents" width="1230" height="1278" fetchpriority="high"></figure>
@@ -71,12 +67,5 @@
     <section class="quiet"><div class="shell"><h2>Des décisions plus claires. Des outils qui restent chez vous.</h2><p>Nous examinons vos chiffres, vos ventes et votre organisation. Ensemble, nous traitons les priorités et mettons en place des outils de gestion que vous pourrez utiliser au quotidien.</p></div></section>
   </main>
   <footer><div class="shell"><span>© 2026 Docteur PME · Dakar, Sénégal</span><span><a href="https://wa.me/221711653570" target="_blank" rel="noopener noreferrer" aria-label="Contacter Docteur PME sur WhatsApp au +221 711 653 570">WhatsApp : +221 711 653 570</a> · <a href="mailto:contact@docteurpme.online">contact@docteurpme.online</a></span></div></footer>
-  <div class="notice" id="notice" role="status" hidden>Le questionnaire sera disponible très bientôt. Vous pouvez nous écrire à contact@docteurpme.online.</div>
-  <script>
-    const cta = document.getElementById('diagnostic');
-    const formUrl = cta.dataset.formUrl.trim();
-    if (formUrl) { cta.href = formUrl; cta.rel = 'noopener noreferrer'; }
-    else cta.addEventListener('click', event => { event.preventDefault(); const notice = document.getElementById('notice'); notice.hidden = false; window.setTimeout(() => { notice.hidden = true; }, 6000); });
-  </script>
 </body>
 </html>
